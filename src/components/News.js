@@ -32,7 +32,7 @@ const News = (props) => {
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - News Bin`
     updateNews()
-  }, [])
+  }, [props.category])
 
   const handlePreviousClick = async () => {
     // let url = `https://newsapi.org/v2/top-headlines?country=${
